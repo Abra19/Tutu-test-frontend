@@ -18,10 +18,11 @@
 
 ### Tech Stack: 
 
-  Typescript
-  Axios
+  - Typescript
 
-### [Try the application](https://getmentor-frontend-git-test-deploy-abra19.vercel.app/)
+  - Axios
+
+### [Try the application](https://tutu-test-frontend.vercel.app/)
 
 
 
