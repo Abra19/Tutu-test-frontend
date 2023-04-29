@@ -27,8 +27,81 @@ body {
   border-radius: 5px;
   border: none;
   box-shadow: 5px 3px 3px gray;
+  cursor: pointer;
+  background-color:cornflowerblue;
+  color: ghostwhite;
+  text-shadow: 1px 1px 2px blue;
+}
+
+.button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }
 
 .button:first-of-type {
   margin-right: 30px;
+}
+
+.tableWrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+table, th, td {
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+
+.table {
+  width: 100%;
+}
+
+th {
+  position: relative;
+}
+
+.headLink {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+.headLink:hover {
+  color: blue;
+}
+
+.ascLink::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 10px solid black;
+}
+
+.descLink::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 10px solid black;
+}
+
+.cell {
+  padding: 5px 10px;
+}
+
+.cell-id {
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
 }

@@ -7,7 +7,7 @@ const path = require('path');
 
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   entry: {
     main: path.resolve(__dirname, './src/index.ts'),
   },
@@ -20,10 +20,7 @@ module.exports = {
       {
         test: /\.ts$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env',  "@babel/preset-typescript"],
-        },
+        loader: 'ts-loader',
       },
       {
         test: /\.css$/,
@@ -37,6 +34,7 @@ module.exports = {
     ]
   },
   optimization: {
+    minimize: true,
     minimizer: [
       new CssMinimizerPlugin(),
     ],
@@ -52,5 +50,8 @@ module.exports = {
   ],
   devServer: {
     port: 3000,
-  }
+  },
+  resolve: {
+    extensions: ['.ts', '.js', '.json']
+}
 };
