@@ -26,6 +26,7 @@ export default async (state: State, elements: Elements, routes: Routes, key: rou
     } catch (err: any) {
       if (elements.tableContainer) {
         elements.tableContainer.textContent = err.message;
+        elements.tableContainer.classList.add('error');
       }
     }
 };

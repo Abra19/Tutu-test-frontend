@@ -49,6 +49,12 @@ body {
   padding-bottom: 40px;
 }
 
+.error {
+  color: red;
+  text-align: center;
+  font-size: 20px;
+}
+
 table, th, td {
   border: 1px solid gray;
   border-collapse: collapse;
