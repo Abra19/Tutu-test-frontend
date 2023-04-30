@@ -22,8 +22,13 @@
 
   - Axios
 
-### [Try the application](https://tutu-test-frontend.vercel.app/)
+### To get started:
 
+1. Clone git repo: ```https://github.com/Abra19/Tutu-test-frontend```
+2. Go to the folder sortComponent:  ```cd sortComponent```
+3. Install packages: ```make install```
+4. Start application on localhost:3000 : ```make start```
+5. Build: ```make build```
 
 
 

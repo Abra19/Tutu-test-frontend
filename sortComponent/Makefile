@@ -1,11 +1,11 @@
 install:
 	npm ci
 
-develop:
+start:
 	npm run develop
 
 build:
 	npm run build
 
 lint:
-	npx eslint . --ext .ts
+	npx eslint . --ext .ts --fix
