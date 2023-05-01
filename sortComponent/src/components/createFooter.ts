@@ -15,7 +15,7 @@ export default (state: State, container: Element | null, elements: Elements) => 
 		link.textContent = (i + 1).toString();
 		listItem.append(link);
 		footer.append(listItem);
-		link.addEventListener('click', e => handlePageClick(e, state, elements, i, state.columns));
+		link.addEventListener('click', e => handlePageClick(e, state, elements, i));
 	}
 	container?.append(footer);
 }

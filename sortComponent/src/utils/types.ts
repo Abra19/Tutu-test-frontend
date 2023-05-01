@@ -1,4 +1,8 @@
 export type routesKey = 'big' | 'small';
+export type headerKeys = {
+	name:string
+	originalName: string
+}
 export interface Elements {
 	bigButton: Element | null
 	smallButton: Element | null
