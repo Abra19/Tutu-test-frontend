@@ -17,18 +17,18 @@ export default () => {
 		small: 'http://www.filltext.com/?rows=32&id={number|1000}&firstName={firstName}&lastName={lastName}&email={email}&phone={phone|(xxx)xxx-xx-xx}&adress={addressObject}&description={lorem|32}',
 	}
 
-	const data: object[] = [];
 	const allData: object[] = [];
+	const columns: string[] = [];
 
 	const state: State = {
-		sortKey: 'name', // name, value !!!!!
-		sortType: 'asc', // asc, desc !!!!!
 		currentPage: 1,
-		data,
 		allData,
+		columns,
 		pageSize: constants.PAGE_SIZE,
 		rows: constants.SMALL_SIZE,
 		key: 'small',
+		directions: {},
+		linkClasses: {},
 	};
 
 	const watchedState: State = onChange(state, () => renderPage(watchedState, elements));

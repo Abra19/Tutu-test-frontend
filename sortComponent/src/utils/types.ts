@@ -6,14 +6,14 @@ export interface Elements {
 }
 
 export interface State {
-	sortKey: string
-	sortType: string
 	currentPage: number
-	data: object[] | null
 	allData: object[] | null
+	columns: string[] | null
 	pageSize: number
 	rows: number
 	key: routesKey
+	directions: any
+	linkClasses: any
 }
 
 export interface Routes {

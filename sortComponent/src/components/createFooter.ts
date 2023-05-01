@@ -1,7 +1,7 @@
 import { Elements, State } from '../utils/types';
 import handlePageClick from '../handlers/handlePageClick';
 
-export default (state: State, container: Element | null, elements: Elements, columns: string[]) => {
+export default (state: State, container: Element | null, elements: Elements) => {
 	const footer = document.createElement('ul');
 	footer.classList.add('footer');
 	for (let i = 0; i < state.rows / state.pageSize; i += 1) {
@@ -15,7 +15,7 @@ export default (state: State, container: Element | null, elements: Elements, col
 		link.textContent = (i + 1).toString();
 		listItem.append(link);
 		footer.append(listItem);
-		link.addEventListener('click', e => handlePageClick(e, state, container, elements, i, columns));
+		link.addEventListener('click', e => handlePageClick(e, state, elements, i, state.columns));
 	}
 	container?.append(footer);
 }

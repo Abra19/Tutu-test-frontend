@@ -4,13 +4,12 @@ import createTable from './components/createTable';
 
 export default (state: State, elements: Elements) => {
 	const { tableContainer } = elements;
-	const { data } = state;
-	if (data && data.length !== 0) {
-		const [first] = data;
-		const columns = Object.keys(first).slice(1, 6);
-		createTable(tableContainer, columns, data);
+	const { allData } = state;
+	if (allData && allData.length !== 0) {
+    const data = state.allData?.slice(0, state.pageSize);
+		createTable(tableContainer, data, state);
 		if (state.rows > state.pageSize) {
-			createFooter(state, tableContainer, elements, columns);
+			createFooter(state, tableContainer, elements);
 		}
 	}
 };

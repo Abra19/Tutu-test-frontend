@@ -82,7 +82,7 @@ th {
   content: '';
   position: absolute;
   top: 5px;
-  right: 5px;
+  right: 1px;
   width: 0;
 	height: 0;
 	border-left: 6px solid transparent;
@@ -94,7 +94,7 @@ th {
   content: '';
   position: absolute;
   top: 5px;
-  right: 5px;
+  right: 1px;
   width: 0;
 	height: 0;
 	border-left: 6px solid transparent;
