@@ -18,6 +18,7 @@ export interface State {
 	key: routesKey
 	directions: any
 	linkClasses: any
+	sortedFields: string[]
 }
 
 export interface Routes {

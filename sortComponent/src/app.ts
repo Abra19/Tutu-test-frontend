@@ -19,6 +19,7 @@ export default () => {
 
 	const allData: object[] = [];
 	const columns: string[] = [];
+	const sortedFields: string[] = [];
 
 	const state: State = {
 		currentPage: 1,
@@ -29,6 +30,7 @@ export default () => {
 		key: 'small',
 		directions: {},
 		linkClasses: {},
+		sortedFields,
 	};
 
 	const watchedState: State = onChange(state, () => renderPage(watchedState, elements));
