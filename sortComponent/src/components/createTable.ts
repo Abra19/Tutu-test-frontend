@@ -1,5 +1,6 @@
 import { State } from '../utils/types';
 import handleHeaderLinks from '../handlers/handleHeaderLinks';
+import handleRowLink from '../handlers/handleRowLink';
 
 const createHeader = (state: State) => {
   const trFirst = document.createElement('tr');
@@ -21,6 +22,7 @@ const createHeader = (state: State) => {
   return trFirst;
 };
 
+
 export default (container: Element | null, data: object[] | undefined | null, state: State) => {
 	if (container) {
 		container.innerHTML = '';
@@ -30,12 +32,15 @@ export default (container: Element | null, data: object[] | undefined | null, st
     const trFirst = createHeader(state);
     tbody.append(trFirst);
     data?.forEach((el: any) => {
+      console.log(el);
       const tr = document.createElement('tr');
       state.columns?.forEach(column => {
         const td = document.createElement('td');
         td.classList.add('cell', `cell-${column}`)
         td.textContent = el[column];
         tr.append(td);
+        tr.classList.add('rowLink');
+        tr.addEventListener('click', (e: any) => handleRowLink(e, el));
       })
       tbody.append(tr);
 		});
