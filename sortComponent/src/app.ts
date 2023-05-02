@@ -9,6 +9,7 @@ export default () => {
 	const elements: Elements = {
 		bigButton: document.querySelector('.bigButton'),
 		smallButton: document.querySelector('.smallButton'),
+		findContainer: document.querySelector('.findInput'),
 		tableContainer: document.querySelector('.tableWrapper'),
 	}
 
@@ -18,12 +19,14 @@ export default () => {
 	}
 
 	const allData: object[] = [];
+	const copyData: object[] = [];
 	const columns: string[] = [];
 	const sortedFields: string[] = [];
 
 	const state: State = {
 		currentPage: 1,
 		allData,
+		copyData,
 		columns,
 		pageSize: constants.PAGE_SIZE,
 		rows: constants.SMALL_SIZE,

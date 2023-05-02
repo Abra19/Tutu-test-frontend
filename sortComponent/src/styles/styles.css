@@ -115,7 +115,7 @@ th {
 .footer {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-top: 20px;
   padding: 0;
 }
@@ -124,6 +124,14 @@ th {
   cursor: pointer;
   text-decoration: none;
   color: gray;
+}
+
+.listItem {
+  margin-right: 15px;
+}
+
+.listItem:last-of-type {
+  margin-right: 0;
 }
 
 .activePageLink {
@@ -158,4 +166,46 @@ textarea {
 .rowLink:hover {
   cursor: pointer;
   background-color:#cccccc;
+}
+
+.findForm {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 50px;
+  margin-bottom: 30px;
+}
+
+.inputForFind {
+  background-image: url('../assets/free-icon-loupe.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 300px;
+  height: 30px;
+  margin-right: 50px;
+  border: 1px solid rgb(144, 140, 140);
+  border-radius: 10px;
+  padding-left: 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+.inputForFind:focus {
+  background: none;
+}
+
+.findButton {
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  border: 1px solid rgb(144, 140, 140);
+  border-radius: 10px;
+  background-color:darkblue;
+  color: whitesmoke;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+.findButton:active {
+  color:aqua;
 }

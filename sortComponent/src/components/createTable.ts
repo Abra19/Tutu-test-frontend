@@ -32,7 +32,6 @@ export default (container: Element | null, data: object[] | undefined | null, st
     const trFirst = createHeader(state);
     tbody.append(trFirst);
     data?.forEach((el: any) => {
-      console.log(el);
       const tr = document.createElement('tr');
       state.columns?.forEach(column => {
         const td = document.createElement('td');

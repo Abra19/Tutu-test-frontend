@@ -1,11 +1,13 @@
 import { Elements, State } from '../utils/types';
 import handlePageClick from '../handlers/handlePageClick';
 
-export default (state: State, container: Element | null, elements: Elements) => {
+export default (state: State, elements: Elements) => {
+	const { tableContainer } = elements;
 	const footer = document.createElement('ul');
 	footer.classList.add('footer');
 	for (let i = 0; i < state.rows / state.pageSize; i += 1) {
 		const listItem = document.createElement('li');
+		listItem.classList.add('listItem');
 		const link = document.createElement('a');
 		link.setAttribute('href', '');
 		link.classList.add('pageLink');
@@ -17,5 +19,5 @@ export default (state: State, container: Element | null, elements: Elements) => 
 		footer.append(listItem);
 		link.addEventListener('click', e => handlePageClick(e, state, elements, i));
 	}
-	container?.append(footer);
+	tableContainer?.append(footer);
 }

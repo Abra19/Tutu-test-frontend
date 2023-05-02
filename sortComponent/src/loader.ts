@@ -14,6 +14,7 @@ export default async (state: State, elements: Elements,
 		const res = await axios.get(route);
 		button?.toggleAttribute('disabled');
 		state.allData?.push(...res.data);
+		state.copyData?.push(...res.data);
 		if (state.allData && state.columns && state.columns.length === 0) {
 			const [first] = state.allData;
 			const columns = Object.keys(first).slice(1, constants.TABLE_DATA_QUANTITY + 1);
